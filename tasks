@@ -1,6 +1,9 @@
 ```sql
-select *
-from dbo.table
+   select p.name, p.id 
+    from [dbo].[Property] p
+    right join [dbo].[OwnerProperty] op
+    on p.id=op.propertyid
+    where ownerid = 1426
 ```
 
     c. For each property in question a), return the following:                                                                      
